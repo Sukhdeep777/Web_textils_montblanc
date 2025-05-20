@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explora sin Límites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: white;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      background: black;
+    }
+
+    .hero h1, .hero h2, .hero p {
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.gifer.com/5yc.gif') no-repeat center center/cover;
+      z-index: 0;
+      opacity: 0.9;
+      animation: slowGif 40s linear infinite;
+    }
+
+    .hero h1 {
+      font-size: 200px;
+      font-weight: bold;
+    }
+
+    .hero h2 {
+      font-size: 120px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 60px;
+      margin-top: 1rem;
+    }
+
+    @keyframes slowGif {
+      0% { opacity: 0.9; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Tèxtils Montblanc S.L.</div> 
+    <ul>
+      <li><a href="#">Nueva Colección</a></li>
+      <li><a href="#">Hombre</a></li>
+      <li><a href="#">Mujer</a></li>
+      <li><a href="#">Niños</a></li>
+      <li><a href="#">Calzado</a></li>
+      <li><a href="#">Accesorios</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>EXPLORA</h1>
+    <h2>SIN LÍMITES</h2>
+    <p>EQUÍPATE PARA TU PRÓXIMA AVENTURA</p>
+  </section>
+</body>
+</html>
