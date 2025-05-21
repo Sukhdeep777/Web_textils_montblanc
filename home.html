@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessoris - Tèxtils Montblanc</title>
+  <title>Botiga Home - Tèxtils Montblanc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -12,13 +12,13 @@
       background: #fff;
       margin: 0;
       font-family: Arial, sans-serif;
-      padding-top: 60px; /* Ajusta este valor según la altura real del nav */
+      padding-top: 70px;
     }
     nav {
       background-color: white;
       padding: 10px 30px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       position: fixed;
       top: 0;
@@ -31,17 +31,17 @@
       font-weight: bold;
       font-family: 'Bebas Neue', sans-serif;
       text-decoration: none;
-      color: black; 
-      margin-right: 1325px;
+      color: black;
+      margin-right: 1327px;
     }
     nav ul {
       display: flex;
       list-style: none;
       font-family: 'Quicksand', sans-serif;
       margin: 0;
-      padding: 0; 
-      justify-content: center;
+      padding: 0;
       flex: 1;
+      justify-content: flex-start;
     }
     nav ul li {
       margin-left: 20px;
@@ -51,6 +51,105 @@
       color: black;
       font-weight: 500;
       font-family: 'Quicksand', sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    }
+    .product-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .product-desc {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+      min-height: 40px;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1a4d2e;
+      margin-bottom: 12px;
+    }
+    .buy-btn {
+      background: #1a4d2e;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .buy-btn.anim {
+      background: #26734d;
+      transform: scale(1.08);
+    }
+    .added-msg {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1a4d2e;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      z-index: 2;
+      animation: fadeInOut 1.2s;
+    }
+    .added-msg.show {
+      display: block;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
@@ -64,6 +163,104 @@
       <li><a href="accessoris.html">Accessoris</a></li>
     </ul>
   </nav>
-  <!-- Aquí tu contenido de accesorios -->
+  <div class="container">
+    <h1>Roba esportiva d'home per a muntanya</h1>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://findyoureverest.es/wp-content/uploads/2024/12/chaqueta-impermeable-os2o-o2-waterproof-trail-pro-30k-goldmedal-01.jpg" alt="Jaqueta impermeable">
+        <div class="product-title">Jaqueta Impermeable Pro</div>
+        <div class="product-desc">Resistent a l'aigua i al vent, ideal per a trekking i senderisme.</div>
+        <div class="product-price">89,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="data:image/jpeg;base64,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" alt="Pantaló tècnic">
+        <div class="product-title">Pantaló Tècnic Trek</div>
+        <div class="product-desc">Lleuger, transpirable i elàstic, perfecte per a rutes llargues.</div>
+        <div class="product-price">59,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.masuniformes.com/cdnassets/camiseta-interior-engel-720_l.jpg" alt="Samarreta tèrmica">
+        <div class="product-title">Samarreta tèrmica</div>
+        <div class="product-desc">Manté la calor corporal i expulsa la humitat.</div>
+        <div class="product-price">29,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://contents.mediadecathlon.com/p1714205/k$187312dea5b52d7997f4cfe09ac3ec92/sq/forro-polar-de-montana-y-trekking-hombre-quechua-mh100-negro.jpg?format=auto&f=800x0 alt="Forro polar">
+        <div class="product-title">Forro polar muntanya</div>
+        <div class="product-desc">Suau, càlid i lleuger, ideal com a segona capa.</div>
+        <div class="product-price">39,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://static.cimalp.fr/40780-large_default/chaqueta-softshell-de-3-capas-con-capucha.jpg" alt="Jaqueta Softshell">
+        <div class="product-title">Jaqueta Softshell</div>
+        <div class="product-desc">Tall ergonòmic, resistent al vent i molt lleugera.</div>
+        <div class="product-price">74,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.veslab.com/33059-large_default/pantalo-d-hivern-alta-visibilitat.jpg" alt="Pantaló d'hivern">
+        <div class="product-title">Pantaló d'hivern</div>
+        <div class="product-desc">Aïllament tèrmic per a les sortides més fredes.</div>
+        <div class="product-price">64,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.landclothes.com/8402-large_default/samarreta-termica-de-maniga-llarga-ethni.jpg" alt="Samarreta tècnica màniga llarga">
+        <div class="product-title">Samarreta tècnica màniga llarga</div>
+        <div class="product-desc">Transpirable i còmoda per a activitats intenses.</div>
+        <div class="product-price">32,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.millet.com/visuels/original/MIV9468_N9646_C4H_0.png?auto=webp&format=pjpg&bg-color=f0eeef&width=750&height=937.5&fit=cover" alt="Polar lleuger">
+        <div class="product-title">Polar lleuger</div>
+        <div class="product-desc">Ideal per portar a la motxilla i posar-lo quan refresca.</div>
+        <div class="product-price">27,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.idkids.fr/media/productstorage/images/okaidi/0709857/thumbs/0604496_500.jpg" alt="Jaqueta tallavent">
+        <div class="product-title">Jaqueta tallavent</div>
+        <div class="product-desc">Protecció lleugera contra el vent i la pluja fina.</div>
+        <div class="product-price">54,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.deportesmazarracin.com/40645-large_default/Camiseta-Transpirable-Deporte-COMPETICION-JUNIOR-Rosa.jpg" alt="Samarreta transpirable">
+        <div class="product-title">Samarreta transpirable</div>
+        <div class="product-desc">Teixit lleuger i fresc per a l'estiu a la muntanya.</div>
+        <div class="product-price">22,99 €</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Animació i missatge "Afegit a la cistella!"
+    document.querySelectorAll('.buy-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btn.classList.add('anim');
+        var msg = btn.nextElementSibling;
+        msg.classList.add('show');
+        setTimeout(function() {
+          btn.classList.remove('anim');
+          msg.classList.remove('show');
+        }, 1200);
+      });
+    });
+  </script>
 </body>
 </html>
