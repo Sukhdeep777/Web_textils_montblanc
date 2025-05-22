@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessoris - Tèxtils Montblanc</title>
+  <title>Calçat  - Tèxtils Montblanc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -51,6 +51,105 @@
       color: black;
       font-weight: 500;
       font-family: 'Quicksand', sans-serif;
+    } 
+    .container {
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    }
+    .product-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .product-desc {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+      min-height: 40px;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1a4d2e;
+      margin-bottom: 12px;
+    }
+    .buy-btn {
+      background: #1a4d2e;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .buy-btn.anim {
+      background: #26734d;
+      transform: scale(1.08);
+    }
+    .added-msg {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1a4d2e;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      z-index: 2;
+      animation: fadeInOut 1.2s;
+    }
+    .added-msg.show {
+      display: block;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
@@ -62,6 +161,111 @@
       <li><a href="dona.html">Dona</a></li>
       <li><a href="calçat.html">Calçat</a></li>
       <li><a href="accessoris.html">Accessoris</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Calçat</h1>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://cdn.runrepeat.com/storage/gallery/product_primary/37139/salomon-quest-4-gtx-21230509-main.jpg" alt="Jaqueta impermeable">
+        <div class="product-title">Botes trekking impermeables</div>
+        <div class="product-desc">Per a caminades llargues en terreny humit.</div>
+        <div class="product-price">89,99 €</div>
+        <div class="product-desc">En Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.lasendadelcorredor.com/ficheros/productos/L47759400_0_GHO_AERO_GLIDE_3_WCosmic_Sky_Vanilla_Ice_Nine_Iron.png.cq5dam.web.1200.1200.jpeg">
+        <div class="product-title">Sabates trail running adherents</div>
+        <div class="product-desc">Excel·lent tracció per a corriols tècnics.</div>
+        <div class="product-price">74 ,99 €</div>
+        <div class="product-desc">Sense Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.querol.net/277829-thickbox_default/sandalies-walk--fly-marrons-de-pell-estil-sandalia-de-riu-amb-velcro.jpg" alt="Samarreta tèrmica">
+        <div class="product-title">Sandàlies de muntanya lleugeres</div>
+        <div class="product-desc">Transpirables i còmodes per a rutes estiuenques.</div>
+        <div class="product-price">39,99 €</div>
+        <div class="product-desc">En Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://tecnicesports.com/7831-large_default/ribelle-tech-20-hd.jpg">
+        <div class="product-title">Botes alpinisme amb aïllament</div>
+        <div class="product-desc">Per a ascensions en fred extrem i neu.</div>
+        <div class="product-price">149,99 €</div>
+        <div class="product-desc">Sense Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://lh5.googleusercontent.com/proxy/JbWBIqbxGkIagnloW7wHmSe7BL5iuO5eUXOlBig-HiJFySjcLBCFH-LbtF3y61nASR5J99eG83uhvpqb3iEvVrAH7V5litsrnc2L8FaohErM_0tforcEdKTLfEFBrMxsaQ">
+        <div class="product-title">Sabates de senderisme baixes</div>
+        <div class="product-desc">Flexibles i resistents per a rutes moderades.</div>
+        <div class="product-price">59,99 €</div>
+        <div class="product-desc">En Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://tbac112.com/2279-large_default/brifo.jpg" alt="Pantaló d'hivern">
+        <div class="product-title">Botes amb protecció de turmell</div>
+        <div class="product-desc">Suport extra per a rutes rocoses i irregulars.</div>
+        <div class="product-price">99,99 €</div>
+        <div class="product-desc">En Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.nummulit.com/313-large_default/sabates-minimalistes-nummulit-montgri-t1.jpg">
+        <div class="product-title">Sabates minimalistes per a muntanya</div>
+        <div class="product-desc">Sensació natural amb bona adherència.</div>
+        <div class="product-price">64,99 €</div> 
+        <div class="product-desc">En Stock.</div>
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.veslab.com/49965-large_default/botes-fal-pegaso-top-gtx500-s3-src-ci-wr.jpg">
+        <div class="product-title">Botes impermeables amb Gore-Tex</div>
+        <div class="product-desc">Protecció total contra aigua i fang.</div>
+        <div class="product-price">217,99 €</div> 
+        <div class="product-desc">Sense Stock.</div> 
+        <button class="buy-btn">Afegir a la cistella</button>
+        <div class="added-msg">Afegit a la cistella!</div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Animació i missatge "Afegit a la cistella!"
+    document.querySelectorAll('.buy-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btn.classList.add('anim');
+        var msg = btn.nextElementSibling;
+        msg.classList.add('show');
+        setTimeout(function() {
+          btn.classList.remove('anim');
+          msg.classList.remove('show');
+        }, 1200);
+      });
+    });
+  </script>
+</body>
+</html>
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="Menú.html" class="logo">Tèxtils Montblanc S.L.</a>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dona.html">Dona</a></li>
+      <li><a href="calçat.html">Calçat</a></li>
     </ul>
   </nav>
   <!-- Aquí tu contenido de accesorios -->

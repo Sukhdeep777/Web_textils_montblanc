@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessoris - Tèxtils Montblanc</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Botiga Dona - Tèxtils Montblanc</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <style>
     body {
       background: #fff;
       margin: 0;
-      font-family: Arial, sans-serif;
-      padding-top: 60px; /* Ajusta este valor según la altura real del nav */
+      font-family: 'Quicksand', sans-serif;
+      padding-top: 70px;
     }
     nav {
       background-color: white;
@@ -31,17 +29,14 @@
       font-weight: bold;
       font-family: 'Bebas Neue', sans-serif;
       text-decoration: none;
-      color: black; 
-      margin-right: 1325px;
+      color: black;
+      margin-right: 10px;
     }
     nav ul {
       display: flex;
       list-style: none;
-      font-family: 'Quicksand', sans-serif;
       margin: 0;
-      padding: 0; 
-      justify-content: center;
-      flex: 1;
+      padding: 0;
     }
     nav ul li {
       margin-left: 20px;
@@ -50,7 +45,91 @@
       text-decoration: none;
       color: black;
       font-weight: 500;
-      font-family: 'Quicksand', sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    }
+    .product-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .product-desc {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1a4d2e;
+      margin-bottom: 12px;
+    }
+    .buy-btn {
+      background: #1a4d2e;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .added-msg {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1a4d2e;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      animation: fadeInOut 1.2s;
+    }
+    .added-msg.show {
+      display: block;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
@@ -61,9 +140,47 @@
       <li><a href="home.html">Home</a></li>
       <li><a href="dona.html">Dona</a></li>
       <li><a href="calçat.html">Calçat</a></li>
-      <li><a href="accessoris.html">Accessoris</a></li>
     </ul>
   </nav>
-  <!-- Aquí tu contenido de accesorios -->
+  <div class="container">
+    <h1>Roba esportiva de dona per a muntanya</h1>
+    <div class="products">
+      <!-- Productes (10) -->
+      <script>
+        const productes = [
+          { img: 'https://contents.mediadecathlon.com/p2583938/k$42570e908d8ca0e591e4531714835ccb/sq/8382341.jpg?format=auto&f=800x0', nom: 'Jaqueta impermeable dona', desc: 'Ideal per a senderisme amb pluja', preu: '79,99 €',stock: 'En Stock' },
+          { img: 'https://www.mgaffaires.com/36393-thickbox_default/pantalon-femme-technician-alpine-pants-black-diamond.jpg', nom: 'Pantalons tècnics elàstics', desc: 'Flexibles i resistents per a rutes', preu: '59,99 €',stock: 'En Stock' },
+          { img: 'https://www.latenda.es/es/images/galeria/579-9789200033483.3.jpg', nom: 'Samarreta transpirable', desc: 'Per mantenir-te fresca a la muntanya', preu: '24,99 €',stock: 'En Stock' },
+          { img: 'https://keniaoutdoor.com/16665-large_default/patagonia-w-s-r1-air-full-zip-hoody-black.jpg', nom: 'Polar lleuger', desc: 'Per a nits fresques o segona capa', preu: '39,99 €',stock: 'En Stock' },
+          { img: 'https://www.laborman.net/wp-content/uploads/2018/11/23819.png', nom: 'Malles tèrmiques', desc: 'Càlides i còmodes per al fred', preu: '29,99 €',stock: 'En Stock' },
+          { img: 'https://www.nomadapirineu.com/wp-content/uploads/2024/03/paravent-tecnic-nomada0.jpg', nom: 'Paravent ultralleuger', desc: 'Protecció contra el vent en cims', preu: '44,99 €',stock: 'En Stock' },
+          { img: 'https://www.bestshopping.es/WebRoot/StoreES/Shops/63731684/5C1B/73C4/E460/5C64/DC45/0A0C/6D0A/E15D/Top_deportivo_tirantes_Mujer__124__Sakhir_RD6662__124__negro.jpg', nom: 'Top esportiu', desc: 'Suport i comoditat durant l’exercici', preu: '19,99 €' },
+          { img: 'https://www.masuniformes.com/cdnassets/dona-blau-mari_ad_l.jpg', nom: 'Jaqueta softshell dona', desc: 'Per a fred moderat i moviment actiu', preu: '69,99 €',stock: 'En Stock' },
+          { img: 'https://www.landclothes.com/5995-large_default/camiseta-maniga-llarga-dona---veleta.jpg', nom: 'Samarreta màniga llarga', desc: 'Respirable i antibacteriana', preu: '34,99 €',stock: 'En Stock' },
+          { img: 'https://keniaoutdoor.com/18714-home_default/icepeak-brea-dark-blue.jpg', nom: 'Pantalons curts tècnics', desc: 'Ideals per a estiu i activitats intenses', preu: '39,99 €',stock: 'En Stock' }
+        ];
+
+        document.write(productes.map(p => `
+          <div class="product-card">
+            <img src="${p.img}" alt="${p.nom}">
+            <div class="product-title">${p.nom}</div>
+            <div class="product-desc">${p.desc}</div>
+            <div class="product-price">${p.preu}</div> 
+            <div class="product-stock">${p.stock}</div>
+            <button class="buy-btn" onclick="afegirCistella(this)">Afegir a la cistella</button>
+            <div class="added-msg">Afegit a la cistella!</div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </div>
+
+  <script>
+    function afegirCistella(btn) {
+      const msg = btn.nextElementSibling;
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 1200);
+    }
+  </script>
 </body>
 </html>
